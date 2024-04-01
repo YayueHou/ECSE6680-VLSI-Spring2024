@@ -9,3 +9,6 @@
   ![](./design_matlab.png)
 - Finally the stopband attenuation 80.3579 dB, and passband ripple is 4.9411 dB
 - Get the b coefficients in ```b.txt``` file.
+## Hardware design
+- After get ```b```, the FIR filter could be directly designed by systemverilog
+- Choose 16bit fix_point to process the assumed FIR

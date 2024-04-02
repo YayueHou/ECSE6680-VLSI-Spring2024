@@ -11,4 +11,12 @@
 - Get the b coefficients in ```b.txt``` file.
 ## Hardware design
 - After get ```b```, the FIR filter could be directly designed by systemverilog
-- Choose 16bit fix_point to process the assumed FIR
+1. First, implement a non-pipelined normal FIR filter, There are two part in the code, one is the delay and the other is accumulation.
+The details could be seen source code ![Code](./FIR.sv)
+  - The block figure is as shown below
+  - The simulation wave is shown below
+  ![](./nopip_res.png)
+2. Next implement the piplined version. 
+  - As discussed by []citation, ...
+  - The piplined simulation wave is shown as below 
+  ![](./pip_res.png)

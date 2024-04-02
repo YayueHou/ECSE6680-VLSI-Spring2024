@@ -1,4 +1,4 @@
-module tb_fir_filter_pipeline;
+module FIR_tb;
 
     // Parameters
     localparam CLK_PERIOD = 1000; // Clock period in ns
@@ -8,14 +8,14 @@ module tb_fir_filter_pipeline;
     // Inputs
     logic clk;
     logic reset;
-    logic [15:0] x;
+    logic [32:0] x;
     
     // Outputs
-    logic  [15:0] y;
-    logic  [15:0] input_data[99999:0] ;
+    logic  signed[32:0] y;
+    logic [32:0] input_data[99999:0] ;
     integer data_index = 0;
     // Instantiate the FIR filter module
-    fir_filter_pipeline dut (
+    FIR dut (
         .clk(clk),
         .reset(reset),
         .x(x),
@@ -35,7 +35,7 @@ module tb_fir_filter_pipeline;
     end
     
     initial begin
-        $readmemb("sin.txt", input_data);
+        $readmemh("sin.txt", input_data);
     end
     // Input signal generation (sine wave)
     initial begin
@@ -45,7 +45,8 @@ module tb_fir_filter_pipeline;
             // Generate sine wave with a frequency of 10000 Hz
             if (data_index < 99999) begin
 
-                x = input_data[data_index];
+                x = input_data[data_index]-32'd65536;
+                $display("Input: %d", input_data[data_index]);
                 data_index = data_index + 1;
                 #(1*CLK_PERIOD);
             end
@@ -56,6 +57,7 @@ module tb_fir_filter_pipeline;
     // Display output
     always @(posedge clk) begin
         $display("Output: %d", y);
+        
     end
     
 endmodule

@@ -1,0 +1,58 @@
+Loading db file '/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : crossbar
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:56:51 2023
+****************************************
+
+
+Library(s) Used:
+
+    gscl45nm (File: /home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  90.5583 uW   (65%)
+  Net Switching Power  =  47.7133 uW   (35%)
+                         ---------
+Total Dynamic Power    = 138.2717 uW  (100%)
+
+Cell Leakage Power     = 717.5213 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  9.0558e-02        4.7713e-02          717.5213            0.1390  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total          9.0558e-02 mW     4.7713e-02 mW       717.5213 nW         0.1390 mW
+1

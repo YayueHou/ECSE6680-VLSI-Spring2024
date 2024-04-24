@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : cell
+Design : comparator
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:54:54 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        BUFX2           gscl45nm        2.346500  
+U4                        BUFX2           gscl45nm        2.346500  
+U5                        BUFX2           gscl45nm        2.346500  
+U6                        BUFX2           gscl45nm        2.346500  
+U7                        OAI21X1         gscl45nm        2.815800  
+U8                        OAI21X1         gscl45nm        2.815800  
+U9                        OAI21X1         gscl45nm        2.815800  
+U10                       OAI21X1         gscl45nm        2.815800  
+U11                       AOI22X1         gscl45nm        3.285100  
+U12                       OR2X1           gscl45nm        2.346500  
+U13                       OAI21X1         gscl45nm        2.815800  
+U14                       OAI21X1         gscl45nm        2.815800  
+U15                       INVX1           gscl45nm        1.407900  
+U16                       INVX1           gscl45nm        1.407900  
+U17                       AOI21X1         gscl45nm        2.815800  
+U18                       AOI21X1         gscl45nm        2.815800  
+U19                       INVX1           gscl45nm        1.407900  
+U20                       INVX1           gscl45nm        1.407900  
+U21                       AOI21X1         gscl45nm        2.815800  
+U22                       INVX1           gscl45nm        1.407900  
+U23                       OAI21X1         gscl45nm        2.815800  
+U24                       OAI21X1         gscl45nm        2.815800  
+U25                       OAI21X1         gscl45nm        2.815800  
+U26                       NOR3X1          gscl45nm        2.815800  
+U27                       INVX1           gscl45nm        1.407900  
+U28                       INVX1           gscl45nm        1.407900  
+U29                       INVX1           gscl45nm        1.407900  
+U30                       INVX1           gscl45nm        1.407900  
+U31                       INVX1           gscl45nm        1.407900  
+U32                       INVX1           gscl45nm        1.407900  
+U33                       INVX1           gscl45nm        1.407900  
+--------------------------------------------------------------------------------
+Total 31 cells                                            68.517799
+1

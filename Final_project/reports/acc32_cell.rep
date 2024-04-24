@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : cell
+Design : adder32
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 16:03:13 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+add_17/U1_0               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_1               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_2               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_3               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_4               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_5               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_6               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_7               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_8               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_9               FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_10              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_11              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_12              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_13              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_14              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_15              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_16              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_17              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_18              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_19              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_20              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_21              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_22              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_23              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_24              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_25              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_26              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_27              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_28              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_29              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_30              FAX1            gscl45nm        8.916700  mo, r
+add_17/U1_31              FAX1            gscl45nm        8.916700  mo, r
+--------------------------------------------------------------------------------
+Total 32 cells                                            285.334412
+1

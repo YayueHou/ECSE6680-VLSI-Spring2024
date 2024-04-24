@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : crossbar
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:56:51 2023
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: Selector[1]
+              (input port)
+  Endpoint: dOut[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  Selector[1] (in)                         0.04       0.04 r
+  U96/Y (INVX1)                            0.04       0.09 f
+  U87/Y (NAND3X1)                          0.04       0.12 r
+  U48/Y (BUFX2)                            0.03       0.16 r
+  U86/Y (INVX1)                            0.03       0.19 f
+  U68/Y (AOI22X1)                          0.05       0.24 r
+  U55/Y (BUFX2)                            0.04       0.27 r
+  U42/Y (AND2X1)                           0.04       0.32 r
+  U67/Y (NAND3X1)                          0.02       0.33 f
+  U43/Y (BUFX2)                            0.03       0.37 f
+  dOut[3] (out)                            0.00       0.37 f
+  data arrival time                                   0.37
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

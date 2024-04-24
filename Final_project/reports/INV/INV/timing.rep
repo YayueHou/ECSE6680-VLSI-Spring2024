@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : inv
+Version: U-2022.12-SP7
+Date   : Tue Apr 16 15:20:24 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: d[0] (input port clocked by clk)
+  Endpoint: reg_data_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  d[0] (in)                                0.02       0.12 f
+  U101/Y (INVX1)                           0.01       0.13 r
+  U94/Y (AND2X1)                           0.06       0.18 r
+  U95/Y (INVX1)                            0.03       0.21 f
+  U40/Y (OR2X1)                            0.04       0.25 f
+  U100/Y (INVX1)                           0.02       0.27 r
+  U41/Y (AND2X1)                           0.05       0.32 r
+  U107/Y (AND2X1)                          0.05       0.37 r
+  U103/Y (AND2X1)                          0.05       0.42 r
+  U104/Y (AND2X1)                          0.05       0.46 r
+  U105/Y (AND2X1)                          0.05       0.51 r
+  U106/Y (AND2X1)                          0.05       0.56 r
+  U108/Y (AND2X1)                          0.05       0.61 r
+  U109/Y (AND2X1)                          0.05       0.66 r
+  U110/Y (AND2X1)                          0.05       0.70 r
+  U111/Y (AND2X1)                          0.05       0.75 r
+  U112/Y (AND2X1)                          0.05       0.80 r
+  U98/Y (AND2X1)                           0.03       0.83 r
+  U99/Y (INVX1)                            0.03       0.85 f
+  U131/Y (XNOR2X1)                         0.03       0.89 f
+  U96/Y (OR2X1)                            0.04       0.93 f
+  U97/Y (INVX1)                            0.00       0.92 r
+  reg_data_reg[15]/D (DFFSR)               0.00       0.92 r
+  data arrival time                                   0.92
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  reg_data_reg[15]/CLK (DFFSR)             0.00       1.00 r
+  library setup time                      -0.07       0.93
+  data required time                                  0.93
+  -----------------------------------------------------------
+  data required time                                  0.93
+  data arrival time                                  -0.92
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

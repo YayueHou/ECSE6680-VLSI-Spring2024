@@ -1,0 +1,514 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP7 for linux64 - Oct 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Thu Nov 16 15:56:49 2023
+Hostname:           epic-ws1.ecse.rpi.edu
+CPU Model:          AMD Ryzen Threadripper PRO 5975WX 32-Cores
+CPU Details:        Cores = 64 : Sockets = 1 : Cache Size = 512 KB : Freq = 3.60 GHz
+OS:                 Linux 4.18.0-477.27.1.el8_8.x86_64
+RAM:                125 GB (Free 112 GB)
+Swap:                 7 GB (Free   7 GB)
+Work Filesystem:    / mounted to /dev/md127
+Tmp Filesystem:     / mounted to /dev/md127
+Work Disk:          1852 GB (Free 1819 GB)
+Tmp Disk:           1852 GB (Free 1819 GB)
+
+CPU Load: 0%, Ram Free: 112 GB, Swap Free: 7 GB, Work Disk Free: 1819 GB, Tmp Disk Free: 1819 GB
+#*********************************************************/
+#* Compile Script for Synopsys                           */
+#*                                                       */
+#* Run this command in terminal                          */
+#* dc_shell-t -f compile_dc.tcl                          */
+#*                                                       */
+#* Library used: SAED_EDK90nm                            */
+#*********************************************************/
+#* All verilog files, separated by spaces                */
+# Only include the top file
+set my_verilog_files {/home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.sv}
+/home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.sv
+#/* Top-level Module                                     */
+set my_toplevel crossbar
+crossbar
+#* The name of the clock pin.                            */
+#* If no clock-pin exists, pick anything                 */
+set my_clock_pin clk
+clk
+#* Target frequency in MHz for optimization              */
+set my_clk_freq_MHz 1000
+1000
+#* Delay of input signals                                */
+#* (Clock-to-Q, Package etc.)                            */
+set my_input_delay_ns 0.1
+0.1
+#* Reserved time for output signals (Holdtime etc.)      */
+set my_output_delay_ns 0.1
+0.1
+# set SAED_EDK90nm [format "%s%s"  [getenv "SAED_EDK90nm"] "/home/rhome/dangs/Documents/sysnthsis_file/SAED_EDK90nm"]
+# set search_path [concat  $search_path $SAED_EDK90nm]
+# set alib_library_analysis path $SAED_EDK90nm
+#*********************************************************/
+#* NO MODIFICATIONS NEEDED BELOW                         */
+#*********************************************************/
+# set target_library "saed90nm_max.db"
+set target_library {/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db}
+/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db
+# set link_library [set target_library [concat  [list saed90nm_max.db]]]
+set link_library {* /home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db}
+* /home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db
+# [list dw_foundation.sldb]]]
+# define_desgin_lib WORK -path ./WORK
+# set verilogout_show_unconnected_pins "true"
+# set_ultra_optimization true
+# set_ultra_optimization -force
+# set the symbol library
+#set symbol_library {/cad/synopsys/SAED_EDK90nm/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/icons/saed90nm.sdb}
+analyze -f sverilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file /home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.sv
+Presto compilation completed successfully.
+Loading db file '/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+1
+elaborate $my_toplevel
+Loading db file '/opt/synopsys/U-2022.12-SP7/libraries/syn/gtech.db'
+Loading db file '/opt/synopsys/U-2022.12-SP7/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.sv:19: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 9 in file
+	'/home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            10            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (crossbar)
+Elaborated 1 design.
+Current design is now 'crossbar'.
+1
+current_design $my_toplevel
+Current design is 'crossbar'.
+{crossbar}
+#set_dont_touch dut
+link
+
+  Linking design 'crossbar'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  crossbar                    /home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.db
+  gscl45nm (library)          /home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db
+
+1
+uniquify
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+Warning: Can't find port 'clk' in design 'crossbar'. (UID-95)
+#if { $find_clock != [list]} {
+set clk_name $my_clock_pin
+clk
+create_clock -period $my_period $clk_name
+Warning: Can't find object 'clk' in design 'crossbar'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+#} else {
+#	set clk_name vclk
+#	create_clock -period $my_period -name $clk_name
+#}
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be set on the port 'Selector[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'Selector[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'Selector[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[7][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[7][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[7][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[7][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[6][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[6][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[6][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[6][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[5][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[5][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[5][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[5][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[4][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[4][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[4][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[4][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[3][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[3][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[3][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[3][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[2][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[2][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[2][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[2][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[1][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[1][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[1][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[1][0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[0][3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[0][2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[0][1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'dIn[0][0]'. (UID-401)
+1
+set_rtl_load -cap 0.002 [all_outputs]
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+Warning: Nothing implicitly matched 'clk' (SEL-003)
+Warning: Can't find clock 'clk' in design 'crossbar'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+Warning: Can't find clock 'clk' in design 'crossbar'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+set_switching_activity -static_probability 1 -toggle_rate 0 [list we]
+Warning: Can't find object 'we' in design 'crossbar'. (UID-95)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+0
+set_switching_activity -static_probability 0 -toggle_rate 0 [list reset]
+Warning: Can't find object 'reset' in design 'crossbar'. (UID-95)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+0
+set_switching_activity -static_probability 0.5 -toggle_rate 0.5 [remove_from_collection [all_inputs] [list we clk reset]]
+Warning: Nothing implicitly matched 'we' (SEL-003)
+Warning: Nothing implicitly matched 'clk' (SEL-003)
+Warning: Nothing implicitly matched 'reset' (SEL-003)
+1
+compile -ungroup_all -map_effort medium -exact_map
+CPU Load: 0%, Ram Free: 112 GB, Swap Free: 7 GB, Work Disk Free: 1819 GB, Tmp Disk Free: 1819 GB
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.5 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 32                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 16                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'crossbar'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'crossbar' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'crossbar'
+  Mapping 'crossbar'
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     100.4      0.00       0.0      37.9                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     100.4      0.00       0.0      37.9                          
+    0:00:00     203.7      0.00       0.0      25.8                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     203.7      0.00       0.0      25.8                          
+    0:00:00     203.7      0.00       0.0      25.8                          
+    0:00:00     171.8      0.00       0.0      27.1                          
+    0:00:00     160.5      0.00       0.0      27.1                          
+    0:00:00     149.2      0.00       0.0      27.1                          
+    0:00:00     149.2      0.00       0.0      27.1                          
+    0:00:00     149.2      0.00       0.0      27.1                          
+    0:00:00     158.6      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+Loading db file '/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 0%, Ram Free: 112 GB, Swap Free: 7 GB, Work Disk Free: 1819 GB, Tmp Disk Free: 1819 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+compile -incremental_mapping -map_effort medium -exact_map
+CPU Load: 0%, Ram Free: 112 GB, Swap Free: 7 GB, Work Disk Free: 1819 GB, Tmp Disk Free: 1819 GB
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 62                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'crossbar' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+    0:00:00     156.7      0.00       0.0      25.8                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     156.7      0.00       0.0      25.8                          
+Loading db file '/home/houy4/Documents/Design_Compiler/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 0%, Ram Free: 112 GB, Swap Free: 7 GB, Work Disk Free: 1819 GB, Tmp Disk Free: 1819 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+check_design
+1
+report_constraint -all_violators
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : crossbar
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:56:51 2023
+****************************************
+
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   n59                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n60                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n62                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n63                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n72                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n73                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n75                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n76                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n77                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n78                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n80                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n81                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n82                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n83                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n85                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n86                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n87                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n88                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n90                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n92                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n93                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n94                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n95                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+   n96                          0.00           0.00           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      24                 -0.04  
+
+1
+#*********************************************************/
+#* NO MODIFICATIONS NEEDED BELOW                         */
+#*********************************************************/
+set filename [format "%s%s"  $my_toplevel ".vh"]
+crossbar.vh
+write -f verilog -output $filename
+Writing verilog file '/home/houy4/Documents/Design_Compiler/Projects/EVA/Components/crossbar/crossbar.vh'.
+1
+set filename [format "%s%s"  $my_toplevel ".sdc"]
+crossbar.sdc
+write_sdc $filename
+1
+set filename [format "%s%s"  $my_toplevel ".db"]
+crossbar.db
+write -f db -hier -output $filename -xg_force_db
+Error: unknown option '-xg_force_db' (CMD-010)
+redirect timing.rep { report_timing }
+redirect cell.rep { report_cell }
+redirect power.rep { report_power }
+#*********************************************************/
+#* QUIT                                                  */
+#*********************************************************/
+quit
+
+Memory usage for this session 100 Mbytes.
+Memory usage for this session including child processes 100 Mbytes.
+CPU usage for this session 1 seconds ( 0.00 hours ).
+Elapsed time for this session 3 seconds ( 0.00 hours ).
+
+Thank you...

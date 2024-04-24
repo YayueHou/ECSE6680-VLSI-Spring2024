@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : comparator
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:54:54 2023
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: a[0] (input port)
+  Endpoint: res (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  a[0] (in)                                0.01       0.01 r
+  U27/Y (INVX1)                            0.02       0.03 f
+  U26/Y (NOR3X1)                           0.05       0.08 r
+  U24/Y (OAI21X1)                          0.03       0.11 f
+  U23/Y (OAI21X1)                          0.04       0.15 r
+  U22/Y (INVX1)                            0.02       0.17 f
+  U21/Y (AOI21X1)                          0.02       0.19 r
+  U6/Y (BUFX2)                             0.04       0.23 r
+  U20/Y (INVX1)                            0.02       0.24 f
+  U18/Y (AOI21X1)                          0.03       0.28 r
+  U5/Y (BUFX2)                             0.03       0.31 r
+  U17/Y (AOI21X1)                          0.01       0.32 f
+  U4/Y (BUFX2)                             0.04       0.36 f
+  U14/Y (OAI21X1)                          0.04       0.40 r
+  U13/Y (OAI21X1)                          0.03       0.42 f
+  U12/Y (OR2X1)                            0.05       0.47 f
+  U11/Y (AOI22X1)                          0.04       0.51 r
+  U3/Y (BUFX2)                             0.04       0.55 r
+  U10/Y (OAI21X1)                          0.01       0.56 f
+  U9/Y (OAI21X1)                           0.02       0.58 r
+  U8/Y (OAI21X1)                           0.02       0.60 f
+  U7/Y (OAI21X1)                           0.02       0.61 r
+  res (out)                                0.00       0.61 r
+  data arrival time                                   0.61
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

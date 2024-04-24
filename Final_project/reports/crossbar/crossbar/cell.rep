@@ -1,0 +1,82 @@
+ 
+****************************************
+Report : cell
+Design : crossbar
+Version: U-2022.12-SP7
+Date   : Thu Nov 16 15:56:51 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U39                       AND2X1          gscl45nm        2.346500  
+U40                       AND2X1          gscl45nm        2.346500  
+U41                       AND2X1          gscl45nm        2.346500  
+U42                       AND2X1          gscl45nm        2.346500  
+U43                       BUFX2           gscl45nm        2.346500  
+U44                       BUFX2           gscl45nm        2.346500  
+U45                       BUFX2           gscl45nm        2.346500  
+U46                       BUFX2           gscl45nm        2.346500  
+U47                       BUFX2           gscl45nm        2.346500  
+U48                       BUFX2           gscl45nm        2.346500  
+U49                       BUFX2           gscl45nm        2.346500  
+U50                       BUFX2           gscl45nm        2.346500  
+U51                       BUFX2           gscl45nm        2.346500  
+U52                       BUFX2           gscl45nm        2.346500  
+U53                       BUFX2           gscl45nm        2.346500  
+U54                       BUFX2           gscl45nm        2.346500  
+U55                       BUFX2           gscl45nm        2.346500  
+U56                       BUFX2           gscl45nm        2.346500  
+U57                       BUFX2           gscl45nm        2.346500  
+U58                       BUFX2           gscl45nm        2.346500  
+U59                       BUFX2           gscl45nm        2.346500  
+U60                       BUFX2           gscl45nm        2.346500  
+U61                       BUFX2           gscl45nm        2.346500  
+U62                       BUFX2           gscl45nm        2.346500  
+U63                       BUFX2           gscl45nm        2.346500  
+U64                       BUFX2           gscl45nm        2.346500  
+U65                       BUFX2           gscl45nm        2.346500  
+U66                       BUFX2           gscl45nm        2.346500  
+U67                       NAND3X1         gscl45nm        2.346500  
+U68                       AOI22X1         gscl45nm        3.285100  
+U69                       AOI22X1         gscl45nm        3.285100  
+U70                       AOI22X1         gscl45nm        3.285100  
+U71                       AOI22X1         gscl45nm        3.285100  
+U72                       NAND3X1         gscl45nm        2.346500  
+U73                       AOI22X1         gscl45nm        3.285100  
+U74                       AOI22X1         gscl45nm        3.285100  
+U75                       AOI22X1         gscl45nm        3.285100  
+U76                       AOI22X1         gscl45nm        3.285100  
+U77                       NAND3X1         gscl45nm        2.346500  
+U78                       AOI22X1         gscl45nm        3.285100  
+U79                       AOI22X1         gscl45nm        3.285100  
+U80                       AOI22X1         gscl45nm        3.285100  
+U81                       AOI22X1         gscl45nm        3.285100  
+U82                       NAND3X1         gscl45nm        2.346500  
+U83                       AOI22X1         gscl45nm        3.285100  
+U84                       INVX1           gscl45nm        1.407900  
+U85                       NAND3X1         gscl45nm        2.346500  
+U86                       INVX1           gscl45nm        1.407900  
+U87                       NAND3X1         gscl45nm        2.346500  
+U88                       AOI22X1         gscl45nm        3.285100  
+U89                       INVX1           gscl45nm        1.407900  
+U90                       NAND3X1         gscl45nm        2.346500  
+U91                       INVX1           gscl45nm        1.407900  
+U92                       NAND3X1         gscl45nm        2.346500  
+U93                       AOI22X1         gscl45nm        3.285100  
+U94                       NOR3X1          gscl45nm        2.815800  
+U95                       NOR3X1          gscl45nm        2.815800  
+U96                       INVX1           gscl45nm        1.407900  
+U97                       AOI22X1         gscl45nm        3.285100  
+U98                       NOR3X1          gscl45nm        2.815800  
+U99                       INVX1           gscl45nm        1.407900  
+U100                      NOR3X1          gscl45nm        2.815800  
+--------------------------------------------------------------------------------
+Total 62 cells                                            156.746197
+1

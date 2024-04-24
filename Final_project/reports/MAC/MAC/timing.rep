@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mac_16
+Version: U-2022.12-SP7
+Date   : Tue Apr 16 13:20:16 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: a[1] (input port clocked by clk)
+  Endpoint: out[26] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 r
+  a[1] (in)                                0.01       0.11 r
+  U1049/Y (INVX1)                          0.02       0.13 f
+  U1170/Y (INVX1)                          0.01       0.13 r
+  U295/Y (INVX1)                           0.01       0.15 f
+  U1369/Y (NOR2X1)                         0.04       0.19 r
+  U1202/Y (NAND3X1)                        0.02       0.21 f
+  U418/Y (INVX1)                           0.02       0.23 r
+  U2609/YS (FAX1)                          0.08       0.30 f
+  U2610/Y (NAND2X1)                        0.01       0.32 r
+  U2611/Y (NAND2X1)                        0.03       0.34 f
+  U1421/Y (NAND2X1)                        0.02       0.37 r
+  U1611/Y (AND2X2)                         0.04       0.40 r
+  U248/Y (INVX1)                           0.02       0.42 f
+  U1729/Y (AND2X2)                         0.03       0.45 f
+  U1423/Y (NAND2X1)                        0.03       0.48 r
+  U850/Y (NAND2X1)                         0.02       0.51 f
+  U4140/Y (XOR2X1)                         0.05       0.55 r
+  U1322/Y (XNOR2X1)                        0.04       0.59 f
+  U687/Y (INVX1)                           0.00       0.59 r
+  U688/Y (INVX1)                           0.01       0.61 f
+  U2692/Y (OAI21X1)                        0.04       0.65 r
+  U2693/Y (NAND2X1)                        0.02       0.67 f
+  U2124/Y (INVX1)                          0.00       0.67 r
+  U2151/Y (INVX1)                          0.01       0.69 f
+  U2731/Y (OAI21X1)                        0.04       0.73 r
+  U3931/Y (INVX1)                          0.03       0.75 f
+  U2777/Y (OAI21X1)                        0.05       0.80 r
+  U791/Y (XNOR2X1)                         0.04       0.85 r
+  U3982/Y (AND2X2)                         0.04       0.88 r
+  U3984/Y (INVX1)                          0.02       0.90 f
+  U2516/Y (NAND2X1)                        0.03       0.92 r
+  U2887/Y (NAND2X1)                        0.03       0.95 f
+  U2153/Y (AND2X2)                         0.04       0.99 f
+  U1391/Y (NAND2X1)                        0.02       1.01 r
+  U1350/Y (NAND2X1)                        0.02       1.04 f
+  U1335/Y (INVX1)                          0.00       1.04 r
+  U1336/Y (INVX1)                          0.01       1.06 f
+  U2899/Y (NAND3X1)                        0.04       1.09 r
+  U2900/Y (NAND3X1)                        0.02       1.12 f
+  U3960/Y (XNOR2X1)                        0.04       1.16 r
+  U3961/Y (INVX1)                          0.02       1.18 f
+  U1408/Y (NAND2X1)                        0.03       1.20 r
+  U1409/Y (NAND2X1)                        0.02       1.22 f
+  U3069/Y (NAND2X1)                        0.01       1.23 r
+  U2123/Y (AND2X2)                         0.04       1.27 r
+  U3891/Y (INVX1)                          0.02       1.29 f
+  U1818/Y (AND2X2)                         0.04       1.33 f
+  U1667/Y (INVX1)                          0.00       1.33 r
+  U1351/Y (NAND2X1)                        0.02       1.34 f
+  U1352/Y (INVX1)                          0.01       1.35 r
+  U3442/Y (AOI21X1)                        0.01       1.36 f
+  U3449/Y (OAI21X1)                        0.05       1.40 r
+  U1256/Y (INVX2)                          0.03       1.43 f
+  U3742/Y (NAND3X1)                        0.04       1.47 r
+  U3743/Y (NAND2X1)                        0.02       1.49 f
+  U3745/Y (NAND3X1)                        0.03       1.52 r
+  U3746/Y (NAND2X1)                        0.03       1.55 f
+  U1481/Y (INVX1)                          0.01       1.56 r
+  U1213/Y (NAND2X1)                        0.01       1.57 f
+  U3750/Y (NAND3X1)                        0.04       1.61 r
+  out[26] (out)                            0.00       1.61 r
+  data arrival time                                   1.61
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  output external delay                   -0.10       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -1.61
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.71
+
+
+1

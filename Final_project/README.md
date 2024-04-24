@@ -50,6 +50,7 @@ $$a\times b = a_{LSB}\times b_{LSB}<< 4 + a_{LSB}\times b_{MSB}<< 2+ a_{MSB}\tim
 ![](./vecreg.png)
 - Top
 ![](./top.png)
+
 ### Synthesis details
 - The execution components are synthesised by synopsys with FreePDK 45nm
 - The memory and local buffer is evaulated by CACTI 7.0.
